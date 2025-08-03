@@ -30,6 +30,8 @@
       <div class="icons">
         <div class="fas fa-search" id="search-btn" title="Search"></div>
         <div class="fas fa-shopping-cart" id="cart-btn" title="Cart"></div>
+        <div class="fas fa-user-plus" id="signup-btn" title="Sign Up"></div>
+        <div class="fas fa-sign-in-alt" id="signin-btn" title="Sign In"></div>
         <div class="fas fa-bars" id="menu-btn" title="Menu"></div>
       </div>
       <div class="search-form">
@@ -62,6 +64,57 @@
           </div>
         </div>
         <a href="#" class="btn">checkout now</a>
+      </div>
+      <!-- Sign Up Modal -->
+      <div class="modal" id="signup-modal">
+        <div class="modal-content">
+          <span class="close-btn" id="signup-close">&times;</span>
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+            <div class="inputBox">
+              <span class="fas fa-user"></span>
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="inputBox">
+              <span class="fas fa-envelope"></span>
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="inputBox">
+              <span class="fas fa-lock"></span>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="inputBox">
+              <span class="fas fa-lock"></span>
+              <input type="password" placeholder="Confirm Password" required />
+            </div>
+            <input type="submit" value="Sign Up" class="btn" />
+          </form>
+          <p>
+            Already have an account?
+            <a href="#" id="switch-to-signin">Sign In</a>
+          </p>
+        </div>
+      </div>
+      <!-- Sign In Modal -->
+      <div class="modal" id="signin-modal">
+        <div class="modal-content">
+          <span class="close-btn" id="signin-close">&times;</span>
+          <h2>Sign In</h2>
+          <form id="signin-form">
+            <div class="inputBox">
+              <span class="fas fa-envelope"></span>
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="inputBox">
+              <span class="fas fa-lock"></span>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <input type="submit" value="Sign In" class="btn" />
+          </form>
+          <p>
+            Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a>
+          </p>
+        </div>
       </div>
     </header>
 
@@ -200,7 +253,6 @@
             <div class="price">Rs.15.99 <span>20.99</span></div>
           </div>
         </div>
-        <!-- Repeat for other product boxes -->
         <div class="box">
           <div class="icons">
             <a href="#" class="fas fa-shopping-cart"></a>
@@ -348,8 +400,6 @@
             <div class="price">Rs.15.99 <span>20.99</span></div>
           </div>
         </div>
-       
-        </div>
       </div>
     </section>
     <!--products section end-->
@@ -359,14 +409,14 @@
       <h1 class="heading">customer's <span>review</span></h1>
       <div class="box-container">
         <div class="box">
-          
           <p>
-           From the moment I walked in, I was blown away by the warm welcome and luxurious ambience. 
-           The room was spotless and the bed was incredibly comfortable. Breakfast was delicious and served
-            with a smile. Will definitely return
+            From the moment I walked in, I was blown away by the warm welcome
+            and luxurious ambience. The room was spotless and the bed was
+            incredibly comfortable. Breakfast was delicious and served with a
+            smile. Will definitely return
           </p>
           <img src="pic/user2.jpeg" alt="" class="user" />
-          <h3>r.Nuwani </h3>
+          <h3>r.Nuwani</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -376,14 +426,14 @@
           </div>
         </div>
         <div class="box">
-          
           <p>
-           Loved the calm atmosphere and the elegant interior design. 
-           The staff were professional and attentive. Only downside was the Wi-Fi speed,
-            but everything else was perfect. Highly recommend for a relaxing getaway.
+            Loved the calm atmosphere and the elegant interior design. The staff
+            were professional and attentive. Only downside was the Wi-Fi speed,
+            but everything else was perfect. Highly recommend for a relaxing
+            getaway.
           </p>
           <img src="pic/user3.jpeg" alt="" class="user" />
-          <h3>S.Kaveen </h3>
+          <h3>S.Kaveen</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -393,7 +443,6 @@
           </div>
         </div>
         <div class="box">
-         
           <p>
             Welcome to D&D Royale, where every sip tells a story! We are
             dedicated to serving the finest coffee and delicious treats in a
@@ -526,4 +575,3 @@
     <!--footer section end-->
   </body>
 </html>
-10
