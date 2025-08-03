@@ -26,8 +26,9 @@ html {
 
 body {
     color: #020202;
-    background: #020202; /* or background-color: #020202; */
+    background: #020202;
 }
+
 section {
     padding: 2rem 7%;
 }
@@ -270,7 +271,7 @@ section {
 
 .menu {
     padding: 5rem 10%;
-    background:  rgb(26, 25, 25);;
+    background: rgb(26, 25, 25);
     text-align: center;
 }
 
@@ -383,11 +384,10 @@ section {
 
 .products .box-container .box .image {
     padding: 1.5rem 0;
-  
 }
 
 .products .box-container .box .image img {
-    width:300px;
+    width: 300px;
     height: 350px;
 }
 
@@ -426,7 +426,7 @@ section {
     border: var(--border);
     text-align: center;
     padding: 2rem;
-    background:  rgb(26, 25, 25);;
+    background: rgb(26, 25, 25);
 }
 
 .review .box-container .box p {
@@ -463,7 +463,7 @@ section {
 .contact .row {
     display: flex;
     align-items: center;
-    background:rgb(18, 18, 18);
+    background: rgb(18, 18, 18);
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -492,7 +492,7 @@ section {
     margin-top: 2rem;
     margin-bottom: 2rem;
     background: rgb(1, 1, 1);
-    border:var(--border) ;
+    border: var(--border);
 }
 
 .contact .row form .inputBox span {
@@ -507,7 +507,7 @@ section {
     font-size: 1.7rem;
     color: #fff;
     text-transform: none;
-    background:  none;
+    background: none;
 }
 
 .blogs .box-container {
@@ -518,7 +518,7 @@ section {
 
 .blogs .box-container .box {
     border: var(--border);
-    background:  rgb(66, 65, 65);;
+    background: rgb(66, 65, 65);
 }
 
 .blogs .box-container .box .image {
@@ -566,7 +566,7 @@ section {
 }
 
 .footer {
-    background: #181817;;
+    background: #181817;
     text-align: center;
 }
 
@@ -619,6 +619,94 @@ section {
     color: var(--main-color);
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1002;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgb(26, 25, 25);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 50rem;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-content .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-content .close-btn:hover {
+    color: var(--main-color);
+}
+
+.modal-content form .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    background: rgb(1, 1, 1);
+    border: var(--border);
+}
+
+.modal-content form .inputBox span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.modal-content form .inputBox input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: none;
+    text-transform: none;
+}
+
+.modal-content form .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.modal-content p a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.modal-content p a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header .navbar {
@@ -654,6 +742,11 @@ section {
     }
 
     section {
+        padding: 2rem;
+    }
+
+    .modal-content {
+        width: 95%;
         padding: 2rem;
     }
 }
