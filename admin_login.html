@@ -3,53 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Login - D&D Luxe Haven</title>
-    <link rel="stylesheet" href="A_style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <title>Responsive Coffee Shop Website</title>
+
+    <!-- custom CSS file link -->
+    <link rel="stylesheet" href="Admin_style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Simple header -->
+    <!-- header section start -->
     <header class="header">
-      <a href="index.html" class="logo">
-        <img src="pic/logo.png" alt="logo" />
+      <a href="#" class="logo">
+        <img src="pic/Logo maker project.png" alt="Coffee Shop Logo" />
       </a>
       <nav class="navbar">
-        <a href="index.html#home">Home</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blog</a>
       </nav>
       <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn" title="Search"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn" title="Cart"></div>
+        <div class="fas fa-user-plus" id="signup-btn" title="Sign Up"></div>
+        <div class="fas fa-sign-in-alt" id="signin-btn" title="Sign In"></div>
+        <div class="fas fa-bars" id="menu-btn" title="Menu"></div>
       </div>
     </header>
 
-    <!-- Login form -->
-    <section class="admin-login">
-      <h1 class="heading">Admin <span>Login</span></h1>
-      <div class="modal-content">
-        <h2>Admin Login</h2>
-        <form id="login-form">
-          <div class="inputBox">
-            <span class="fas fa-user"></span>
-            <input type="text" id="username" placeholder="Username" required />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-lock"></span>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <input type="submit" value="Login" class="btn" />
-        </form>
-        <p id="login-error" class="error" style="display: none">
-          Invalid username or password
-        </p>
-      </div>
+    <h1 class="t_main">Admin <span>Login</span></h1>
+    <section class="Admin_Login">
+      <form action="#" method="post">
+        <label>Username:</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter your username:"
+          required
+        /><br />
+
+        <label>Username:</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password:"
+          required
+        /><br />
+        <input type="submit" value="login" class="login_btn" />
+      </form>
     </section>
-    <script src="script.js"></script>
   </body>
 </html>
