@@ -1,0 +1,19 @@
+
+.t_main {
+   
+    color:#c78a5e;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 180px;
+}
+
+.Admin_Login{
+    width:400px ;
+    height: 400px;
+    align-items: center;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 2rem;
+    margin: auto;
+}
