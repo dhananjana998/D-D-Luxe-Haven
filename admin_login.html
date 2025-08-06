@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login - D&D Luxe Haven</title>
+    <link rel="stylesheet" href="A_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Simple header -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="pic/logo.png" alt="logo" />
+      </a>
+      <nav class="navbar">
+        <a href="index.html#home">Home</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+    </header>
+
+    <!-- Login form -->
+    <section class="admin-login">
+      <h1 class="heading">Admin <span>Login</span></h1>
+      <div class="modal-content">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" id="username" placeholder="Username" required />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-lock"></span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <input type="submit" value="Login" class="btn" />
+        </form>
+        <p id="login-error" class="error" style="display: none">
+          Invalid username or password
+        </p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
