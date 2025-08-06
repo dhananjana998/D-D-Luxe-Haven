@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - D&D Luxe Haven</title>
+    <link rel="stylesheet" href="A_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header with minimal navigation -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="pic/logo.png" alt="logo" />
+      </a>
+      <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="#" id="logout-btn">Logout</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+    </header>
+
+    <!-- Admin section for menu management -->
+    <section class="admin">
+      <h1 class="heading">Admin <span>Dashboard</span></h1>
+      <div class="admin-container">
+        <!-- Form to add new menu item -->
+        <h2>Add Menu Item</h2>
+        <form id="add-form">
+          <div class="inputBox">
+            <span class="fas fa-utensils"></span>
+            <input type="text" id="add-name" placeholder="Item Name" required />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-dollar-sign"></span>
+            <input
+              type="number"
+              id="add-price"
+              placeholder="Price"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-dollar-sign"></span>
+            <input
+              type="number"
+              id="add-discount"
+              placeholder="Discount Price (optional)"
+              step="0.01"
+            />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-image"></span>
+            <input
+              type="text"
+              id="add-image"
+              placeholder="Image URL (e.g., pic/menu-1.jpg)"
+              required
+            />
+          </div>
+          <input type="submit" value="Add Item" class="btn" />
+        </form>
+        <!-- Table to display menu items -->
+        <h2>Manage Menu Items</h2>
+        <table class="menu-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Discount</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="menu-table-body">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+        <!-- Modal for editing items -->
+        <div class="modal" id="edit-modal">
+          <div class="modal-content">
+            <span class="close-btn" id="edit-close">&times;</span>
+            <h2>Edit Menu Item</h2>
+            <form id="edit-form">
+              <input type="hidden" id="edit-id" />
+              <div class="inputBox">
+                <span class="fas fa-utensils"></span>
+                <input
+                  type="text"
+                  id="edit-name"
+                  placeholder="Item Name"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span class="fas fa-dollar-sign"></span>
+                <input
+                  type="number"
+                  id="edit-price"
+                  placeholder="Price"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span class="fas fa-dollar-sign"></span>
+                <input
+                  type="number"
+                  id="edit-discount"
+                  placeholder="Discount Price (optional)"
+                  step="0.01"
+                />
+              </div>
+              <div class="inputBox">
+                <span class="fas fa-image"></span>
+                <input
+                  type="text"
+                  id="edit-image"
+                  placeholder="Image URL"
+                  required
+                />
+              </div>
+              <input type="submit" value="Update Item" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
