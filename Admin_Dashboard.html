@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Coffee Shop Website</title>
+
+    <!-- custom CSS file link -->
+    <link rel="stylesheet" href="Admin_style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section start -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="pic/Logo maker project.png" alt="Coffee Shop Logo" />
+      </a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blog</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn" title="Search"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn" title="Cart"></div>
+        <div class="fas fa-user-plus" id="signup-btn" title="Sign Up"></div>
+        <div class="fas fa-sign-in-alt" id="signin-btn" title="Sign In"></div>
+        <div class="fas fa-bars" id="menu-btn" title="Menu"></div>
+      </div>
+    </header>
+
+    <h1 class="t_main">Admin <span>Dashboard</span></h1>
+
+    <section class="Admin_dashboard">
+      <h1>Admin Dashboard - Manage Menu Item</h1>
+
+      <!--Add item Form -->
+      <div class ="add_item">
+        <h2>Add New Menu Item</h2>
+        <form id="add_form">
+          <div class="inputBox">
+            <span>Name:</span>
+            <input type ="text" id= "add-name" required>
+          </div>
+          <div class="inputBox">
+            <span>Price:</span>
+            <input type ="text" id="add-price" step="0.01" required>
+          </div>
+          <div class="inputBox">
+            <span>Discount Price (optional):</span>
+            <input type ="text" id="add-discount" step="0.01" >
+          </div>
+          <div class="inputBox">
+            <span>Image URL:</span>
+            <input type ="text" id= "add-image" required>
+          </div>
+          <button type="submit" class="btn" >Add Item</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Menu Item Table -->
+      <div class ="Menu Item">
+        <h2>Current Menu Item</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Print</th>
+              <th>Discount Price </th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="menu-table-body">
+            <!--add this plas to js code-->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!--Edit model-->
+    <div id="edit-modal" class="modal">
+    <div class="Modal-content">
+      <span class="close-btn" id="edit-close">&times;</span>
+      <h2> Edit Menu Item</h2>
+       <form id="edit- form">
+        <input type="hidden" id="edit-id">
+        <div class="inputBox">
+          <span>Name:</span>
+          <input type="text" id="edit-name" required>
+        </div>
+        <div class="inputBox">
+          <span>Price:</span>
+          <input type="text" id="edit-price" required>
+        </div>
+        <div class="inputBox">
+          <span>Discount Price:</span>
+          <input type="text" id="edit-discount" required>
+        </div>
+        <div class="inputBox">
+          <span>Image URL:</span>
+          <input type="text" id="edit-image" required>
+        </div>
+        <button type="submit" class="btn">Update Item</button>
+       </form>
+      
+    </div>
+    </div>
+    <!--footer section start-->
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="credit">
+        created by <span>D.G.S.S.Dhananjana</span> | All Rights Reserved|
+        @copyright 2025 <br /><br />
+        Email:sachinisewmini2002@gmail.com
+      </div>
+    </section>
+    <!--footer section end-->
+  </body>
+</html>
