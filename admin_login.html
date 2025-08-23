@@ -35,28 +35,53 @@
 
     <h1 class="t_main">Admin <span>Login</span></h1>
 
-    <section class="Admin_Login">
-      <form action="#" method="post">
-        <label class="Admin_laber">Username:</label>
+    <div class="Admin_Login">
+      <form id="login-form">
+        <label for="username" class="Admin_laber">Username:</label>
         <input
           type="text"
-          name="username"
+          id="username"
           class="Admin_textbox"
-          placeholder="      Enter your username:"
+          placeholder="Enter your username"
           required
-        /><br /><br /><br />
+        /><br /><br />
 
-        <label class="Admin_laber">Password:</label>
+        <label for="password" class="Admin_laber">Password:</label>
         <input
           type="password"
-          name="password"
+          id="password"
           class="Admin_textbox"
-          placeholder="      Enter your password:"
+          placeholder="Enter your password"
           required
-        /><br />
-        <input type="submit" value="login" class="login_btn" />
+        /><br /><br />
+
+        <button type="submit" class="login_btn">Login</button>
       </form>
-    </section>
+    </div>
+
+    <script>
+      //after load the html part run this script
+      document.addEventListener("DOMContentLoaded", () => {
+        // to connect to login submit event
+        const loginForm = document.querySelector("#login-form");
+        if (loginForm) {
+          //e mean submit event
+          loginForm.onsubmit = (e) => {
+            //used to default submit the form
+            e.preventDefault();
+            //used  trim() to remove before and after spase(whitespace)
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            if (username === "admin" && password === "admin123") {
+              localStorage.setItem("admin", "logged_in");
+              window.location.href = "Admin_Dashboard.html";
+            } else {
+              alert("Invalid username or password.");
+            }
+          };
+        }
+      });
+    </script>
     <!--footer section start-->
     <section class="footer">
       <div class="share">
